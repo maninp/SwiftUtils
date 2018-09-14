@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iAb-rK-tQJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="abD-RP-ICb">
+            <objects>
+                <navigationController id="iAb-rK-tQJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="sCG-zv-Jmt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.44705882352941173" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pYA-H0-el6" kind="relationship" relationship="rootViewController" id="VB8-w1-voK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3NB-ZJ-JQw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1271" y="114"/>
+        </scene>
+        <!--Color Samples-->
+        <scene sceneID="itX-C4-wGl">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="pYA-H0-el6" customClass="ViewController" customModule="ipjsystest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FLX-pz-x2T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kP5-aA-EL0">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZQ-gI-Rze">
+                                <rect key="frame" x="93.5" y="359.5" width="188.5" height="64"/>
+                                <color key="backgroundColor" red="0.32549019607843138" green="0.42745098039215684" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="jlE-tm-FnM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Gradient"/>
+                                <connections>
+                                    <action selector="gradientTapped:" destination="pYA-H0-el6" eventType="touchUpInside" id="098-Bs-FNg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88235294117647056" green="0.88627450980392153" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BZQ-gI-Rze" firstAttribute="centerX" secondItem="T7L-vd-Qij" secondAttribute="centerX" id="Bf0-z4-ikq"/>
+                            <constraint firstItem="BZQ-gI-Rze" firstAttribute="width" secondItem="T7L-vd-Qij" secondAttribute="width" multiplier="1:2" constant="1" id="XSh-qJ-1FW"/>
+                            <constraint firstItem="kP5-aA-EL0" firstAttribute="bottom" secondItem="T7L-vd-Qij" secondAttribute="bottom" id="Xmd-5q-vdD"/>
+                            <constraint firstItem="kP5-aA-EL0" firstAttribute="leading" secondItem="T7L-vd-Qij" secondAttribute="leading" id="f92-Xv-K2T"/>
+                            <constraint firstItem="kP5-aA-EL0" firstAttribute="top" secondItem="T7L-vd-Qij" secondAttribute="top" id="kp4-pS-bg4"/>
+                            <constraint firstItem="kP5-aA-EL0" firstAttribute="trailing" secondItem="T7L-vd-Qij" secondAttribute="trailing" id="pPd-tH-QoS"/>
+                            <constraint firstItem="BZQ-gI-Rze" firstAttribute="centerY" secondItem="T7L-vd-Qij" secondAttribute="centerY" id="tnm-ur-fPf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T7L-vd-Qij"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Color Samples" id="Fyd-Fv-ufA"/>
+                    <connections>
+                        <outlet property="gradientBtn" destination="BZQ-gI-Rze" id="wqL-dh-ngs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADd-cc-9dn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="113.79310344827587"/>
+        </scene>
+    </scenes>
+</document>
