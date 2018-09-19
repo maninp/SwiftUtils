@@ -49,7 +49,8 @@ class GradientView: UIView {
     }
     
     private func sharedInit() {
-        layer.addSublayer(gradientLayer)
+        layer.insertSublayer(gradientLayer, at: 0)
+        //layer.addSublayer(gradientLayer)
     }
     
     override func layoutSubviews() {
